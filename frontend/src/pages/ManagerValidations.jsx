@@ -11,7 +11,7 @@ const ManagerValidation = () => {
   useEffect(() => {
     if (selectedPosition) {
       // Fetch users who submitted responses for this position
-      fetch(`http://localhost:5000/api/responses?position=${selectedPosition}`)
+      fetch(`https://txrhtrainingwebapp.onrender.com/api/responses?position=${selectedPosition}`)
         .then(res => res.json())
         .then(data => {
           // Extract unique users
@@ -24,7 +24,7 @@ const ManagerValidation = () => {
 
   useEffect(() => {
     if (!selectedEmployee || !selectedPosition) return;
-    fetch(`http://localhost:5000/api/responses?position=${selectedPosition}&userId=${selectedEmployee}`)
+    fetch(`https://txrhtrainingwebapp.onrender.com/api/responses?position=${selectedPosition}&userId=${selectedEmployee}`)
       .then(res => res.json())
       .then(data => setResponses(data))
       .catch(console.error);

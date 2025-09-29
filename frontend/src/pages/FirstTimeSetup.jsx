@@ -21,7 +21,7 @@ const FirstTimeSetup = ({ setUser }) => {
 
     try {
       // Mock API call - replace with backend
-      const response = await fetch("http://10.0.0.208:5000/api/first-time-setup", {
+      const response = await fetch("https://txrhtrainingwebapp.onrender.com/api/first-time-setup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ posId, firstName, lastName, newPassword })

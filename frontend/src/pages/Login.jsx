@@ -12,7 +12,7 @@ const Login = ({ setUser }) => {
 
     try {
       // Mock API call - replace with real backend
-      const response = await fetch("http://10.0.0.208:5000/api/login", {
+      const response = await fetch("https://txrhtrainingwebapp.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ posId, password })

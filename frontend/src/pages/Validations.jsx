@@ -13,7 +13,7 @@ const Validation = ({ user }) => {
     if (!selectedPosition) return;
     setLoading(true);
     setError("");
-    fetch(`http://localhost:5000/api/validationQ?position=${encodeURIComponent(selectedPosition)}`)
+    fetch(`https://txrhtrainingwebapp.onrender.com/api/validationQ?position=${encodeURIComponent(selectedPosition)}`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch questions");
         return res.json();
@@ -39,7 +39,7 @@ const Validation = ({ user }) => {
       answers: questions.map(q => ({ questionId: q._id, answer: answers[q._id] || "" }))
     };
 
-    fetch("http://localhost:5000/api/responses", {
+    fetch("https://txrhtrainingwebapp.onrender.com/api/responses", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)

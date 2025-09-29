@@ -1,0 +1,52 @@
+.home-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch; /* Ensure cards stretch to the same height */
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes content to take full height */
+  background: #8af575;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height:180px; /* Make card take full height of the grid cell */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  flex-grow: 1; /* Makes paragraphs take remaining space if needed */
+}
+
+
+/* Optional: smaller cards on very small screens */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+}

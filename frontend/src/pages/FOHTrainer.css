@@ -1,0 +1,49 @@
+.foh-trainer-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.foh-trainer-container h1 {
+  color:black
+}
+
+
+.position-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.position-card {
+  background: #8af575;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.position-card:hover {
+  transform: translateY(-3px);
+}
+
+.agenda-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.agenda-buttons {
+  margin-top: 1rem;
+}
+
+.agenda-buttons button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
